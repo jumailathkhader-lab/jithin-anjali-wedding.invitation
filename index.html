@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f0e3">
+  <title>Jithin & Anjali | Wedding Invitation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Allura&family=Prata&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root{--wine:#6a2d32;--gold:#a98045;--brown:#76533a;--cream:#f7f0e3;--serif:'Prata',Georgia,serif;--script:'Allura',cursive;--sans:'Manrope',sans-serif}
+    *{box-sizing:border-box}html,body{margin:0;min-height:100%;background:var(--cream)}body{color:#49362c;font-family:var(--sans)}button{font:inherit}
+    .cover{height:100svh;min-height:620px;position:relative;overflow:hidden;background:var(--cream);transform-origin:top center;transition:transform 1.1s cubic-bezier(.65,0,.35,1),opacity .9s ease;will-change:transform,opacity}
+    .cover::before{content:"";position:absolute;inset:0;background-image:linear-gradient(180deg,rgba(38,23,16,.025),rgba(255,249,236,.02) 34%,rgba(255,249,236,.12) 100%),url('wedding-cover-mobile.jpg');background-size:100% 100%;background-position:center;background-repeat:no-repeat;transform:scale(1.01)}
+    .cover.is-opening{transform:translateY(-100%) scale(.985);opacity:0}
+    .border{position:absolute;z-index:2;inset:15px;border:1px solid rgba(105,72,47,.78);pointer-events:none}.border::after{content:"";position:absolute;inset:5px;border:1px solid rgba(137,99,66,.42)}
+    .cover-copy{position:absolute;z-index:1;left:50%;top:83%;transform:translateX(-50%);width:min(92%,650px);display:flex;flex-direction:column;align-items:center;text-align:center;padding:5px 14px 12px;animation:rise 1s both ease-out}
+    .open{border:1px solid var(--brown);border-radius:2px;background:rgba(255,253,247,.78);color:#5f3f2c;padding:6px 12px;letter-spacing:.14em;font-weight:600;font-size:.6rem;cursor:pointer;box-shadow:0 3px 12px rgba(72,48,29,.08);transition:background .25s,transform .25s,box-shadow .25s}.open:hover{background:#fffdf7;transform:translateY(-2px);box-shadow:0 6px 16px rgba(72,48,29,.12)}.open:focus-visible{outline:2px solid var(--brown);outline-offset:4px}
+    .petal{position:absolute;z-index:1;color:#a45143;font-size:15px;opacity:0;animation:fall 5.5s linear infinite;pointer-events:none}.p1{left:13%;top:13%;animation-delay:.4s}.p2{left:78%;top:10%;animation-delay:2.4s}.p3{left:90%;top:25%;animation-delay:3.8s}.p4{left:25%;top:18%;animation-delay:1.4s}.p5{left:39%;top:2%;animation-delay:1.9s;font-size:12px}.p6{left:57%;top:7%;animation-delay:3.2s;font-size:18px}.p7{left:67%;top:20%;animation-delay:.8s;font-size:13px}.p8{left:5%;top:30%;animation-delay:2.8s;font-size:17px}.p9{left:48%;top:1%;animation-delay:4.1s;font-size:12px}.p10{left:84%;top:42%;animation-delay:1.1s;font-size:16px}.p11{left:31%;top:34%;animation-delay:3.6s;font-size:13px}.p12{left:72%;top:3%;animation-delay:4.8s;font-size:14px}
+    @keyframes rise{from{opacity:0;transform:translate(-50%,14px)}to{opacity:1;transform:translate(-50%,0)}}@keyframes fall{0%{transform:translateY(-10px) rotate(0);opacity:0}15%{opacity:.6}100%{transform:translateY(100svh) rotate(240deg);opacity:0}}
+    @media(max-width:600px){.cover{min-height:620px}.cover::before{background-size:100% 100%,100% 100%;background-position:center,top center}.cover-copy{top:83%;width:94%;padding:0 9px}.border{inset:11px}}
+    @media(max-height:700px) and (min-width:601px){.cover{min-height:580px}.cover-copy{top:83%}}
+    @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
+  </style>
+</head>
+<body>
+  <main>
+    <section class="cover" aria-label="Wedding invitation cover">
+      <div class="border" aria-hidden="true"></div>
+      <span class="petal p1" aria-hidden="true">✿</span><span class="petal p2" aria-hidden="true">✿</span><span class="petal p3" aria-hidden="true">❀</span><span class="petal p4" aria-hidden="true">❀</span><span class="petal p5" aria-hidden="true">✿</span><span class="petal p6" aria-hidden="true">❀</span><span class="petal p7" aria-hidden="true">✽</span><span class="petal p8" aria-hidden="true">✿</span><span class="petal p9" aria-hidden="true">❀</span><span class="petal p10" aria-hidden="true">✿</span><span class="petal p11" aria-hidden="true">✽</span><span class="petal p12" aria-hidden="true">❀</span>
+      <div class="cover-copy">
+        <button class="open" id="open" type="button">OPEN INVITATION</button>
+      </div>
+    </section>
+  </main>
+  <script>
+    const cover = document.querySelector(".cover");
+    document.getElementById("open").addEventListener("click", (event) => {
+      event.currentTarget.disabled = true;
+      cover.classList.add("is-opening");
+      window.setTimeout(() => { window.location.href = "invitation.html"; }, 1000);
+    });
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
